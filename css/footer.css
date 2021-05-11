@@ -1,0 +1,14 @@
+footer {
+  background-color: #eccfd1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0;
+}
+.footer-link {
+  padding: 1rem;
+}
+#footer-name a {
+  font-size: 1.5rem;
+  color: #425bb5;
+}

@@ -1,0 +1,19 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20.25 19.5"
+  height="24"
+  width="24"
+>
+  <circle class="icon-part" cx="2.34" cy="2.34" r="2.34"></circle>
+  <rect
+    class="icon-part"
+    x="0.17"
+    y="6.36"
+    width="4.35"
+    height="13.14"
+  ></rect>
+  <path
+    class="icon-part"
+    d="M16.88,6.36a4.9,4.9,0,0,0-5.62,1.9V6.36H6.91V19.5h4.35V11.93a2.6,2.6,0,0,1,2.6-2.42c2.35,0,2,4.33,2,4.33V19.5h4.35V13.84S21,7.38,16.88,6.36Z"
+  ></path>
+</svg>
