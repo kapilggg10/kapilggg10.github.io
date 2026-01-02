@@ -8,104 +8,276 @@
       content="Personal Portfolio Website: Kapil Goyal"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    
+    <!-- Preload fonts -->
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap"
+      />
+    </noscript>
+    
+    <!-- Critical CSS - Load normally for initial render -->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/section1.css" />
+    
+    <!-- Non-critical CSS - Load asynchronously (not needed for FCP/LCP) -->
+    
+    <link
+      rel="preload"
+      href="css/section2.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="css/section2.css" />
+    </noscript>
+    
+    <link
+      rel="preload"
+      href="css/section3.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="css/section3.css" />
+    </noscript>
+    
+    <link
+      rel="preload"
+      href="css/footer.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="css/footer.css" />
+    </noscript>
+    
+    <!-- Font Awesome - Load asynchronously after initial render -->
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      />
+    </noscript>
+    
     <title>Kapil Goyal</title>
   </head>
   <body>
-    <nav class="navbar target change">
-      <a href="#" class="navbar-link">
-        <i class="fas fa-home"></i>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <nav class="navbar target change" aria-label="Main navigation">
+      <a href="#home" class="navbar-link" aria-label="Navigate to home section">
+        <i class="fas fa-home" aria-hidden="true"></i>
         <span>Home</span>
       </a>
-      <a href="#about" class="navbar-link">
-        <i class="fas fa-address-card"></i>
+      <a href="#about" class="navbar-link" aria-label="Navigate to about section">
+        <i class="fas fa-address-card" aria-hidden="true"></i>
         <span>About</span>
       </a>
-      <a href="#experience" class="navbar-link">
-        <i class="fas fa-briefcase"></i>
+      <a href="#experience" class="navbar-link" aria-label="Navigate to experience section">
+        <i class="fas fa-briefcase" aria-hidden="true"></i>
         <span>Experience</span>
       </a>
-      <a href="#icons" class="navbar-link">
-        <i class="fas fa-id-card-alt"></i>
+      <a href="#icons" class="navbar-link" aria-label="Navigate to contact section">
+        <i class="fas fa-id-card-alt" aria-hidden="true"></i>
         <span>Contact</span>
       </a>
     </nav>
-    <div class="menu target change"></div>
-    <div class="section-1" id="home">
+    <button 
+      class="menu target change" 
+      type="button"
+      aria-label="Toggle navigation menu"
+      aria-expanded="false"
+    ></button>
+    <main id="main-content">
+    <section class="section-1" id="home" aria-label="Home section">
       <div class="section-1-content">
         <a
           class="my-name"
           href="https://www.linkedin.com/in/kapil-goyal-7244b214b/"
           target="_blank"
           rel="noreferrer"
+          aria-label="Kapil Goyal's LinkedIn profile (opens in new tab)"
           >Kapil Goyal</a
         >
         <h1 class="my-intro-header">
-          Frontend & <br />
-          JS Developer
+          Senior<br />
+          Software Engineer
         </h1>
       </div>
-    </div>
-    <div class="section-2" id="about">
+    </section>
+    <section class="section-2" id="about" aria-label="About section">
       <div class="left-container">
-        <span class="item-number">01</span>
-        <h1 class="about-header">
+        <span class="item-number" aria-hidden="true">01</span>
+        <h2 class="about-header">
           Know <br />
           About me
-        </h1>
+        </h2>
         <p class="details-about-section">
           <strong
-            >SDE-II | Frontend Developer | Javascript, Typescript, ReactJS,
+            >Senior Software Engineer | Javascript, Typescript, ReactJS, NextJS,
             VueJS</strong
           >
           <br />
           <br />
           <span>
-            Skilled in Algorithms, C++, JavaScript/TypeScript, Python
-            (Programming Languages) and ReactJS, VueJS. I am a strong
-            engineering professional with a Bachelor of Technology focused in
-            CSE from IIIT Kota.
+            I am a Senior Software Engineer with 6+ years of experience building
+            scalable, high-performance web platforms. Specialist in
+            React/Next.js ecosystems, frontend architecture, and performance
+            optimization for developer-facing and enterprise products. Proven
+            track record of leading cross-functional initiatives, accessibility
+            compliance and infrastructure efficiency at scale.
           </span>
         </p>
-        <img src="./img/Signature.svg" alt="signature" class="signature" />
+        <img
+          src="./img/Signature.svg"
+          async
+          alt="Kapil Goyal's signature"
+          class="signature"
+        />
       </div>
       <div class="right-container">
-        <div class="about-border"></div>
-        <img src="./img/my-img.jpg" alt="my-img" class="about-img" />
+        <div class="about-border" aria-hidden="true"></div>
+        <img src="./img/my-img.jpg" alt="Portrait photo of Kapil Goyal" class="about-img" async />
       </div>
-    </div>
-    <div class="section-3" id="experience">
-      <span class="item-number">02</span>
-      <h1 class="about-header">
-        My <br />
-        Experience
-      </h1>
+    </section>
+    <section class="section-3" id="experience" aria-label="Experience section">
+      <span class="item-number" aria-hidden="true">02</span>
+      <h2 class="about-header">Experience</h2>
       <div class="experience-list">
         <ul class="timeline">
           <li class="timeline-event">
             <span class="timeline-event-logo"></span>
             <div class="timeline-event-container">
-              <p class="timeline-event-time">February 2021 - Present</p>
+              <p class="timeline-event-time">February 2024 - Present</p>
+              <h3 class="timeline-event-designation">
+                Senior Software Engineer
+              </h3>
+              <h4 class="timeline-event-employer">HackerRank</h4>
+              <div class="job-details-container">
+                <ul class="job-details-list">
+                  <li class="job-details-list-item">
+                    <h4>Lead Engineer - Engage</h4>
+                    <span>
+                      Lead frontend engineer for Engage team’s Next-GenUI using
+                      Next.js and RTK Query, owning design, performance, and
+                      delivery.
+                    </span>
+                  </li>
+                  <li class="job-details-list-item">
+                    <h4>Question Creation Flow</h4>
+                    <span
+                      >Designed and implemented an optimized project-based
+                      “Question Creation Flow”, improving creation time by 35%
+                      and increasing platform adoption by 40%</span
+                    >
+                  </li>
+                  <li class="job-details-list-item">
+                    <h4>Infrastructure Optimizations (Cost)</h4>
+                    <span
+                      >Designed and implemented a custom Pause/Resume VM
+                      lifecycle, reducing operational costs by 70% with no UX
+                      impact.
+                    </span>
+                  </li>
+                  <li class="job-details-list-item">
+                    <h4>Monorepo & Build System Improvements:</h4>
+                    <span>
+                      Led the migration of shared component libraries to a
+                      Monorepo architecture, reducing the primary bundle size by
+                      80% directly impacting Core Web Vitals.
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="timeline-event">
+            <span class="timeline-event-logo"></span>
+            <div class="timeline-event-container">
+              <p class="timeline-event-time">February 2022 - January 2024</p>
+              <h3 class="timeline-event-designation">SDE-II</h3>
+              <h4 class="timeline-event-employer">HackerRank</h4>
+              <div class="job-details-container">
+                <ul class="job-details-list">
+                  <li class="job-details-list-item">
+                    <h4>Platform Improvements</h4>
+                    <span>
+                      Identified bundle size bottleneck in the Design system and
+                      implemented tree-shaking and split-chunk strategies.
+                    </span>
+                    <span>
+                      Identified rendering issues in the main HRW pages and led
+                      the thorough analysis of the root cause and implemented
+                      optimizations to improve the performance of the pages.
+                    </span>
+                  </li>
+                  <li class="job-details-list-item">
+                    <h4>Accessibility Compliance</h4>
+                    <span>
+                      Spearheaded the accessibility overhaul for full-stack
+                      assessments, achieving WCAG 2.1 Level AA compliance and
+                      mitigating legal compliance risks.
+                    </span>
+                  </li>
+                  <li class="job-details-list-item">
+                    <h4>Cross Product and Customer Success</h4>
+                    <span>
+                      Partnered with Product and Customer Success teams to
+                      identify high-friction user issues, translated customer
+                      pain points into technical requirements.
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="timeline-event">
+            <span class="timeline-event-logo"></span>
+            <div class="timeline-event-container">
+              <p class="timeline-event-time">February 2021 - February 2022</p>
               <h3 class="timeline-event-designation">SDE-II</h3>
               <h4 class="timeline-event-employer">Original4Sure</h4>
               <div class="job-details-container">
                 <ul class="job-details-list">
                   <li class="job-details-list-item">
-                    <header>White Label Apps</header>
+                    <h4>Internal Admin App</h4>
+                    <span>
+                      Architected and developed an Internal Admin App from
+                      scratch, enabling comprehensive Role-Based Access Control
+                      (RBAC)
+                    </span>
+                  </li>
+                  <li class="job-details-list-item">
+                    <h4>White Label Apps</h4>
                     <span
                       >Created Several Web apps for clients using
                       <strong>VueJS and ElectronJS</strong></span
                     >
                   </li>
                   <li class="job-details-list-item">
-                    <header>Fronted Management</header>
+                    <h4>Fronted Architecture</h4>
                     <span
-                      >I am one of the core Fronted Developers to manage several
-                      Frontend Projects of<strong>VueJS </strong></span
+                      >I was one of the core Fronted Developers to develop and
+                      manage several Frontend Projects using
+                      <strong>VueJS </strong></span
                     >
                   </li>
                 </ul>
@@ -128,7 +300,7 @@
                   </li>
 
                   <li class="job-details-list-item">
-                    <header>Okta Sign-Sign-On Integration</header>
+                    <h4>Okta Sign-Sign-On Integration</h4>
                     <span>
                       Refactored login flow from AngularJS-1.x and NodeJS to
                       Server-less using <strong>ReactJS</strong> and Integrated
@@ -136,7 +308,7 @@
                     </span>
                   </li>
                   <li class="job-details-list-item">
-                    <header>Workflows</header>
+                    <h4>Workflows</h4>
                     <span>
                       A project to create dynamic forms using server side
                       rendering on <strong>NodeJS</strong> with socket
@@ -153,15 +325,16 @@
                   </li>
                   <li class="job-details-list-item">
                     <span>
-                      Worked on several small projects to meet business goals
-                      and to increase product efficiency
+                      Contributed to multiple projects to achieve business goals
+                      and enhance product efficiency, including developing a
+                      Campaign creation project from scratch.
                     </span>
                   </li>
                 </ul>
               </div>
             </div>
           </li>
-          <li class="timeline-event">
+          <!-- <li class="timeline-event">
             <span class="timeline-event-logo"></span>
             <div class="timeline-event-container">
               <p class="timeline-event-time">December 2018 - January 2019</p>
@@ -176,53 +349,63 @@
                 </span>
               </div>
             </div>
-          </li>
+          </li> -->
         </ul>
       </div>
-    </div>
+    </section>
+    </main>
     <footer>
       <div id="icons">
         <a
           href="https://twitter.com/kapilggg10"
           target="_blank"
+          rel="noreferrer"
           class="footer-link"
+          aria-label="Visit Kapil Goyal's Twitter profile (opens in new tab)"
         >
-          <img src="./img/twitter.svg" alt="img" />
+          <img src="./img/twitter.svg" alt="" aria-hidden="true" />
         </a>
         <a
           href="https://www.instagram.com/tech_boy_kapil/"
           target="_blank"
+          rel="noreferrer"
           class="footer-link"
+          aria-label="Visit Kapil Goyal's Instagram profile (opens in new tab)"
         >
-          <img src="./img/instagram.svg" alt="img" />
+          <img src="./img/instagram.svg" alt="" aria-hidden="true" />
         </a>
         <a
           href="https://www.linkedin.com/in/kapil-goyal-7244b214b/"
           target="_blank"
+          rel="noreferrer"
           class="footer-link"
+          aria-label="Visit Kapil Goyal's LinkedIn profile (opens in new tab)"
         >
-          <img src="./img/linkedin.svg" alt="img" />
+          <img src="./img/linkedin.svg" alt="" aria-hidden="true" />
         </a>
         <a
           href="https://github.com/kapilggg10"
           target="_blank"
+          rel="noreferrer"
           class="footer-link"
+          aria-label="Visit Kapil Goyal's GitHub profile (opens in new tab)"
         >
-          <img src="./img/github.svg" alt="img" />
+          <img src="./img/github.svg" alt="" aria-hidden="true" />
         </a>
         <a
           href="./assets/Web_Resume_Kapil.pdf"
           target="_blank"
           class="footer-link"
           download
+          aria-label="Download Kapil Goyal's resume PDF (opens in new tab)"
         >
-          <img src="./img/pdf-document.svg" alt="img" />
+          <img src="./img/pdf-document.svg" alt="" aria-hidden="true" />
         </a>
       </div>
       <div id="footer-name">
-        <a href="mailto:kapilggg10@gmail.com">@ Kapil Goyal</a>
+        <a href="mailto:kapilggg10@gmail.com" aria-label="Send email to Kapil Goyal">@ Kapil Goyal</a>
       </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="script.js" async></script>
   </body>
 </html>

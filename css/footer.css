@@ -4,11 +4,37 @@ footer {
   justify-content: center;
   align-items: center;
   padding: 3rem 0;
+  gap: 2rem;
 }
 .footer-link {
   padding: 1rem;
+  display: inline-block;
+  transition: transform 0.3s;
+}
+.footer-link:focus-visible {
+  outline: 3px solid #425bb5;
+  outline-offset: 3px;
+  border-radius: 4px;
 }
 #footer-name a {
   font-size: 1.5rem;
   color: #425bb5;
+  transition: color 0.3s;
 }
+#footer-name a:focus-visible {
+  outline: 3px solid #425bb5;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (min-width: 300px) and (max-width: 600px) {
+  /* Footer */
+  footer {
+    flex-direction: column;
+    padding: 2rem 0;
+  }
+  #footer-name {
+    margin-bottom: 1rem;
+  }
+}
+
