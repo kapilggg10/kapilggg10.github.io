@@ -1,0 +1,19 @@
+{
+  "name": "kapil-goyal-portfolio",
+  "version": "1.0.0",
+  "description": "Personal Portfolio Website",
+  "scripts": {
+    "build": "node build.js",
+    "optimize": "node build.js"
+  },
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3",
+    "html-minifier-terser": "^7.2.0",
+    "imagemin": "^8.0.1",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^9.0.0",
+    "imagemin-svgo": "^10.0.0",
+    "terser": "^5.26.0"
+  }
+}
+

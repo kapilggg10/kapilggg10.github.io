@@ -1,0 +1,7 @@
+node_modules/
+*.tmp
+dist/
+img/optimized/
+.DS_Store
+*.log
+
